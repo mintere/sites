@@ -4,6 +4,7 @@ import { ThemeManifest } from "./api-data";
 import { DeploymentData } from "./api-data";
 
 export { knownHelpers } from "./known-handlebars-helpers";
+export { handlebarsCompileOptions, precompileTemplate, compileTemplate } from "./handlebars-compile"
 
 export function hydrateTemplate(template: any) {
   return Handlebars.template(template)
