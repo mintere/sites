@@ -2,6 +2,13 @@
 
 [Documentation](https://docs.mintere.site)
 
+## Usage
+
+```sh
+npm i @mintere/sites-renderer
+yarn add @mintere/sites-renderer
+```
+
 ## License
 
 > This program is free software: you can redistribute it and/or modify it under the terms of
