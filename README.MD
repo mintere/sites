@@ -1,13 +1,16 @@
 # Mintere Sites Renderer
 
+Mintere's [Open source](LICENSE) site renderer. 
+
+[Get Started](https://docs.mintere.site/getting-started)
+
 [Documentation](https://docs.mintere.site)
 
-## Usage
+## Development 
 
-```sh
-npm i @mintere/sites-renderer
-yarn add @mintere/sites-renderer
-```
+Build with `npm run build`, publish with `npm publish`.
+
+Don't forget about [`npm link`](https://docs.npmjs.com/cli/link.html)
 
 ## License
 
