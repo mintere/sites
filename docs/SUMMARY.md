@@ -6,8 +6,8 @@
 ## Theme Development
 
 * [Helpers](theme-development/helpers/README.md)
-  * [staticFilePath](theme-development/helpers/staticfilepath.md)
   * [eq](theme-development/helpers/eq.md)
+  * [staticFilePath](theme-development/helpers/staticfilepath.md)
 
 ## Other Mintere Resources
 
