@@ -10,8 +10,6 @@ Mintere's [Open source](LICENSE) site renderer.
 
 Build with `npm run build`, publish with `npm publish`.
 
-Don't forget about [`npm link`](https://docs.npmjs.com/cli/link.html)
-
 ## License
 
 > This program is free software: you can redistribute it and/or modify it under the terms of
