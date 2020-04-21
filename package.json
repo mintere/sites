@@ -1,7 +1,7 @@
 {
   "name": "@mintere/sites",
   "version": "1.0.0",
-  "description": "The Open Source Front-End for Mintere Sites",
+  "description": "The Source-Available Front-End for Mintere Sites",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/mintere/sites-renderer.git"
   },
   "author": "Mintere (mintere.com)",
-  "license": "SSPL-1.0",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/mintere/sites-renderer/issues"
   },
