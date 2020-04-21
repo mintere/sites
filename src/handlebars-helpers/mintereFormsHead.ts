@@ -8,13 +8,13 @@ export default class MintereFormsHead extends HandlebarsHelper {
     
     this.globalCtx.mintereFormsHeadRendered = true;
 
-    const {recaptchaV3PublicKey} = this.globalCtx.deployment;
+    const {recaptchaV3PublicKey, formSubmissionUrl} = this.globalCtx.renderContext;
 
     const urlEncoded = Handlebars.escapeExpression(encodeURIComponent(recaptchaV3PublicKey));
     
     return new Handlebars.SafeString(`
 <script src="/_mintere/forms.js" id="mintere-forms-code"
-        data-recaptcha-key="${urlEncoded}" data-form-submission-url="${this.globalCtx.deployment.formSubmissionUrl}" ></script>`
+        data-recaptcha-key="${urlEncoded}" data-form-submission-url="${formSubmissionUrl}" ></script>`
     )
 
     

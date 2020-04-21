@@ -1,5 +1,4 @@
-import { ThemeManifest } from "../api-data";
-import { DeploymentData } from "../api-data";
+import { RenderContext } from '../common/context';
 
 export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
   name: string;
@@ -17,8 +16,8 @@ export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
 }
 
 export interface HandlebarsHelperGlobalContext {
-  themeManifest: ThemeManifest;
-  deployment: DeploymentData;
+  compilerMetadata: any;
+  renderContext: RenderContext;
 
   mintereFormsHeadRendered?: true;
 }

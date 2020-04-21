@@ -1,44 +1,8 @@
-import Handlebars from "handlebars";
-import getHelpers from "./handlebars-helpers";
-import { ThemeManifest } from "./api-data";
-import { DeploymentData } from "./api-data";
+import render from "./render";
+import bundleFile from "./compile/bundler";
 
-export { knownHelpers } from "./known-handlebars-helpers";
-export { handlebarsCompileOptions, precompileTemplate, compileTemplate } from "./handlebars-compile"
+export {render, bundleFile};
 
-export function hydrateTemplate(template: any) {
-  return Handlebars.template(template)
-}
+export {CMSConnectionForRender} from "./cms";
 
-export function hydratePartials(partials: {
-  [k: string]: any
-}, transformer: (_: any) => any = (a) => a) {
-  return Object.keys(partials).reduce((obj, partialName) => {
-    return {
-      ...obj,
-      [partialName]: hydrateTemplate(transformer(partials[partialName]))
-    };
-  }, {});
-}
-
-export interface PartialsMap  {
-  [k: string]: Handlebars.TemplateDelegate;
-}
-
-export function renderHandlebars(
-  template: Handlebars.TemplateDelegate,
-  partials: PartialsMap,
-  {renderData, themeManifest, deployment}: {
-    renderData: any,
-    themeManifest: ThemeManifest,
-    deployment: DeploymentData
-  }
-): string {
-  return template(renderData, {
-    helpers: getHelpers({
-      themeManifest,
-      deployment
-    }),
-    partials: partials
-  });
-}
+export {BundleStorer, BundleRetrieval} from "./common/bundle";

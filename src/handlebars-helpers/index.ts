@@ -1,8 +1,17 @@
-import { HandlebarsHelpers } from "../known-handlebars-helpers";
 import { HandlebarsHelperGlobalContext } from "./abstract";
-import StaticFilePathHelper from "./staticFilePath";
 import MintereFormsHead from "./mintereFormsHead";
 import MintereForm from "./mintereForm";
+
+export type HandlebarsHelpers =
+  "mintereFormsHead" | "mintereForm" | "eq";
+
+export const knownHelpers: {
+  [k in HandlebarsHelpers]: true;
+} = {
+  mintereFormsHead: true,
+  mintereForm: true,
+  eq: true
+};
 
 export default function getHelpers(
   options: HandlebarsHelperGlobalContext
@@ -10,7 +19,6 @@ export default function getHelpers(
   [k in HandlebarsHelpers]: Handlebars.HelperDelegate;
 } {
   return {
-    staticFilePath: new StaticFilePathHelper(options).handlebarsDelegate,
     mintereFormsHead: new MintereFormsHead(options).handlebarsDelegate,
     mintereForm: new MintereForm(options).handlebarsDelegate,
     eq(a, b, c) {

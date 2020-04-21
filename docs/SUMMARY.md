@@ -8,7 +8,6 @@
   * [Logic](theme-development/helpers/logic/README.md)
     * [eq](theme-development/helpers/logic/eq.md)
   * [Assets](theme-development/helpers/assets/README.md)
-    * [staticFilePath](theme-development/helpers/assets/staticfilepath.md)
 
 ## Renderer \(Advanced\) <a id="renderer"></a>
 
