@@ -1,6 +1,6 @@
-# Mintere Sites Renderer
+# Mintere Sites
 
-Mintere's [Open source](LICENSE) site renderer. 
+Mintere's [Open source](LICENSE) CMS front-end. 
 
 [Get Started](https://docs.mintere.site/getting-started)
 
