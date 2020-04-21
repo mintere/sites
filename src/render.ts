@@ -1,4 +1,4 @@
-import { Readable } from "stream";
+import { Readable } from "readable-stream";
 import { CMSConnectionForRender } from "./cms";
 import { BundleRetrieval } from "./common/bundle";
 import { Error404, HTTPError } from "./error-pages";

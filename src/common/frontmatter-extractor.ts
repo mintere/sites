@@ -1,4 +1,4 @@
-import { Transform, Readable } from "stream";
+import { Transform, Readable } from "readable-stream";
 import json5 from "json5";
 
 export default class FrontmatterExtractor extends Transform {

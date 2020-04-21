@@ -1,5 +1,5 @@
 import getRawBody from "raw-body";
-import { PassThrough, Readable } from "stream";
+import { PassThrough, Readable } from "readable-stream";
 import { CompiledFileType } from "../common/file-types";
 import compilerMap from "./compilers";
 import { CompileContext } from "../common/context";

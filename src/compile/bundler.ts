@@ -1,4 +1,4 @@
-import { Readable } from "stream";
+import { Readable } from "readable-stream";
 import { fileTypeForName, fileTypeIsCompiled } from "../common/file-types";
 import compile from "./compiler";
 import { TemplateSchema } from "../common/schema";

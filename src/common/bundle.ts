@@ -1,4 +1,4 @@
-import { Readable } from "stream";
+import { Readable } from "readable-stream";
 import { FileType } from './file-types';
 
 export interface FileMetadata {

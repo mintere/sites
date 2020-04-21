@@ -1,4 +1,4 @@
-import { PassThrough } from "stream";
+import { PassThrough } from "readable-stream";
 import { AbstractRenderer } from "./abstract";
 import getRawBody from "raw-body";
 import Handlebars from "handlebars";
