@@ -1,3 +1,4 @@
+import Handlebars from "handlebars";
 import { AbstractCompiler } from "./abstract";
 import { knownHelpers } from '../../handlebars-helpers';
 

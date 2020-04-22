@@ -3,6 +3,9 @@ import { fileTypeForName, fileTypeIsCompiled } from "../common/file-types";
 import compile from "./compiler";
 import { TemplateSchema } from "../common/schema";
 import { BundleStorer, FileMetadata } from "../common/bundle";
+import getRawBody from "raw-body";
+
+const MAX_FILE_SIZE = "10mb";
 
 export default async function bundleFile(
   fileName: string,
@@ -20,6 +23,8 @@ export default async function bundleFile(
     contentType: fileType,
   };
 
+  let fileContent;
+
   if (fileTypeIsCompiled(fileType)) {
     const { partials, file } = await compile(fileType, fileName, stream, {});
 
@@ -27,17 +32,19 @@ export default async function bundleFile(
 
     if (typeof file === "undefined") return [];
 
-    stream = file.stream;
+    fileContent = file.content;
 
     if (typeof file.metadata !== "undefined")
       fileMetadata.compilerMetadata = file.metadata;
 
     if (typeof file.templateSchema !== "undefined")
       templateSchemas.push(file.templateSchema);
+  } else {
+    fileContent = await getRawBody(stream, {limit: MAX_FILE_SIZE})
   }
 
   await store.storeFile(fileName, {
-    stream,
+    content: fileContent as string | Buffer,
     metadata: fileMetadata,
   });
 

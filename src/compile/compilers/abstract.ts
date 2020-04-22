@@ -4,7 +4,7 @@ import { CompileContext } from '../../common/context';
 
 export type CompilerResponse = {
   file?: {
-    compiled: string;
+    compiled: Buffer | string;
     metadata?: any;
   }
   handlebarsPartials?: StoredPartials;

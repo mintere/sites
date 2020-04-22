@@ -13,7 +13,7 @@ type StreamCompilationResult = {
   partials?: StoredPartials;
   file?:
     | {
-        stream: Readable;
+        content: Buffer | String;
         metadata?: any;
         templateSchema?: TemplateSchema;
       }
@@ -48,10 +48,7 @@ export default async function compile(
     compilationResult.partials = handlebarsPartials;
 
   if (typeof compiledFile !== "undefined") {
-    const stream = new PassThrough();
-    stream.end(compiledFile.compiled);
-
-    compilationResult.file = { stream };
+    compilationResult.file = { content: compiledFile.compiled };
 
     if (typeof compiledFile.metadata !== "undefined")
       compilationResult.file.metadata = compiledFile.metadata;

@@ -15,7 +15,10 @@ export interface StoredPartials {
 }
 
 export interface BundleStorer {
-  storeFile(fileName: string, file: StoredFile): Promise<void>
+  storeFile(fileName: string, file: {
+    content: Buffer | string;
+    metadata: FileMetadata;
+  }): Promise<void>
 
   /** May be called multiple times with subsets */
   storePartials(partials: StoredPartials): Promise<void>
