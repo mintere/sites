@@ -27,9 +27,9 @@ interface PartialsMap {
 }
 
 function parseCompiledTemplate(source: string) {
-  const templateSpec = new Function(
+  const templateSpec = (new Function(
     "return " + source
-  );
+  ))();
   return hydrateTemplate(templateSpec);
 }
 

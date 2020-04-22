@@ -18,7 +18,8 @@ export default async function render(
 ): Promise<RenderedResult> {
   try {
     // static files
-    const file = await bundle.retrieveFile("public/" + path);
+    const sep = (path.startsWith("/") ? "" : "/") // exactly one slash between public and path.
+    const file = await bundle.retrieveFile("public" + sep + path);
     if (typeof file !== "undefined")
       return {
         rendered: file.stream,
