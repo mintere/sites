@@ -1,8 +1,8 @@
 {
   "name": "@mintere/sites",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Source-Available Front-End for Mintere Sites",
-  "main": "dist/index.cjs.js",
+  "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",

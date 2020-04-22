@@ -54,7 +54,8 @@ export default [
 			"path"
 		],
 		output: [
-			{ dir: "dist", format: 'es' }
+			{ dir: "dist", format: 'cjs' },
+			{ format: 'esm', file: "dist/index.esm.js" }
     ],
     plugins: [
 			typescript()
