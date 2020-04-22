@@ -5,4 +5,6 @@ export {render, bundleFile};
 
 export {CMSConnectionForRender} from "./cms";
 
+export {HTTPError} from "./error-pages";
+
 export {BundleStorer, BundleRetrieval} from "./common/bundle";

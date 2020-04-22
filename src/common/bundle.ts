@@ -1,4 +1,3 @@
-import { Readable } from "readable-stream";
 import { FileType } from './file-types';
 
 export interface FileMetadata {
@@ -7,7 +6,7 @@ export interface FileMetadata {
 }
 
 export interface StoredFile {
-  stream: Readable;
+  stream: NodeJS.ReadableStream;
   metadata: FileMetadata;
 }
 

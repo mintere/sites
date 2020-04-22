@@ -1,11 +1,10 @@
-import { Readable } from "readable-stream";
 import { CMSConnectionForRender } from "./cms";
 import { BundleRetrieval } from "./common/bundle";
-import { Error404, HTTPError } from "./error-pages";
+import { HTTPError } from "./error-pages";
 import { rendererMap } from "./renderers";
 
 export interface RenderedResult {
-  rendered: Readable | string;
+  rendered: NodeJS.ReadableStream | string;
   httpContentType: string;
 
   /** Treat as 200 if not present. */
@@ -31,11 +30,11 @@ export default async function render(
     );
     const template = await bundle.retrieveFile(templateUid);
     if (typeof template === "undefined")
-      throw new Error404("Template does not exist, template: " + templateUid);
+      throw new HTTPError.NotFound("Template does not exist, template: " + templateUid);
 
     const renderer = rendererMap[template.metadata.contentType];
     if (typeof renderer === "undefined")
-      throw new Error404(
+      throw new HTTPError.NotFound(
         "Renderer for template does not exist, template: " + templateUid
       );
 

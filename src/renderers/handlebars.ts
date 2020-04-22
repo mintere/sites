@@ -48,7 +48,7 @@ const handlebarsRenderer: AbstractRenderer = async function handlebarsRenderer(
   const stream = new PassThrough();
 
   const [templateSrc, partialsDownload] = await Promise.all([
-    getRawBody(file.stream, { encoding: true }),
+    getRawBody(file.stream as any, { encoding: true }),
     bundle.retrievePartials(),
   ]);
 
