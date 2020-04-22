@@ -54,7 +54,6 @@ export default [
 			"path"
 		],
 		output: [
-			{ dir: "dist", format: 'cjs' },
 			{ dir: "dist", format: 'es' }
     ],
     plugins: [
