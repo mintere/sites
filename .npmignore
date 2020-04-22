@@ -104,3 +104,14 @@ typings/
 
 src
 docs
+
+__tests__
+.github/workflows
+.gitbook.yaml
+
+yarn.lock
+package-lock.json
+rollup.config.js 
+tsconfig.json 
+.git
+.gitignore
