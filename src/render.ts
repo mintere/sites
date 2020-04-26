@@ -3,6 +3,7 @@ import { BundleRetrieval } from "./common/bundle";
 import { HTTPError } from "./error-pages";
 import { rendererMap } from "./renderers";
 
+
 export interface RenderedResult {
   rendered: NodeJS.ReadableStream | string;
   httpContentType: string;
@@ -38,6 +39,8 @@ export default async function render(
       throw new HTTPError.NotFound(
         "Renderer for template does not exist, template: " + templateUid
       );
+
+    
 
     return renderer(template, renderData, renderContext, bundle);
   } catch (e) {

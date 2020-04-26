@@ -1,4 +1,5 @@
 import { RenderContext } from '../common/context';
+import { BundleRetrieval } from '../common/bundle';
 
 export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
   name: string;
@@ -18,6 +19,12 @@ export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
 export interface HandlebarsHelperGlobalContext {
   compilerMetadata: any;
   renderContext: RenderContext;
+
+  blocks: {
+    [k: string]: Handlebars.TemplateDelegate;
+  }
+
+  renderTemplate(template: Handlebars.TemplateDelegate, data: any): string
 
   mintereFormsHeadRendered?: true;
 }

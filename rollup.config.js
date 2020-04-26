@@ -53,7 +53,8 @@ export default [
 			"events",
 			"path",
 			"markdown-it",
-			"punycode"
+			"punycode",
+			"tslib"
 		],
 		output: [
 			{ dir: "dist", format: 'cjs' },

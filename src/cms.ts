@@ -1,8 +1,16 @@
 import { RenderContext } from "./common/context";
 
+export interface RenderData {
+  title: string,
+  uid: string,
+  metaDescription: string,
+  settings: any,
+  blocks: any
+}
+
 interface CMSContent {
   templateUid: string;
-  renderData: any;
+  renderData: RenderData;
   renderContext: RenderContext;
 }
 

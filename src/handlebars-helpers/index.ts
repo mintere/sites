@@ -3,9 +3,10 @@ import { HandlebarsHelperGlobalContext } from "./abstract";
 import MintereFormsHead from "./mintereFormsHead";
 import MintereForm from "./mintereForm";
 import RenderMarkdown from "./renderMarkdown";
+import RenderBlock from './renderBlock';
 
 export type HandlebarsHelpers =
-  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown";
+  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown" | "renderBlock";
 
 export const knownHelpers: {
   [k in HandlebarsHelpers]: true;
@@ -14,7 +15,16 @@ export const knownHelpers: {
   mintereForm: true,
   eq: true,
   renderRichText: true,
-  renderMarkdown: true
+  renderMarkdown: true,
+  renderBlock: true
+};
+
+
+const allowedEqualityChecks: {
+  [k in string]?: true
+} = {
+  "string": true,
+  "number": true
 };
 
 export default function getHelpers(
@@ -27,14 +37,12 @@ export default function getHelpers(
     mintereForm: new MintereForm(options).handlebarsDelegate,
     renderRichText: new RenderMarkdown(options).handlebarsDelegate,
     renderMarkdown: new RenderMarkdown(options).handlebarsDelegate,
-    eq(a, b, c) {
+    renderBlock: new RenderBlock(options).handlebarsDelegate,
+    eq(a: any, b: any, c: any) {
       if(typeof c == "undefined") return false;
-
-      const allowedEqualityChecks = ["string", "number"];
-
       return (
-        allowedEqualityChecks.includes(typeof a) &&
-        allowedEqualityChecks.includes(typeof b) &&
+        allowedEqualityChecks[typeof a] &&
+        allowedEqualityChecks[typeof b] &&
         a === b
       );
     }
