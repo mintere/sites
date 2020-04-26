@@ -1,16 +1,20 @@
+import Handlebars from "handlebars";
 import { HandlebarsHelperGlobalContext } from "./abstract";
 import MintereFormsHead from "./mintereFormsHead";
 import MintereForm from "./mintereForm";
+import RenderMarkdown from "./renderMarkdown";
 
 export type HandlebarsHelpers =
-  "mintereFormsHead" | "mintereForm" | "eq";
+  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown";
 
 export const knownHelpers: {
   [k in HandlebarsHelpers]: true;
 } = {
   mintereFormsHead: true,
   mintereForm: true,
-  eq: true
+  eq: true,
+  renderRichText: true,
+  renderMarkdown: true
 };
 
 export default function getHelpers(
@@ -21,6 +25,8 @@ export default function getHelpers(
   return {
     mintereFormsHead: new MintereFormsHead(options).handlebarsDelegate,
     mintereForm: new MintereForm(options).handlebarsDelegate,
+    renderRichText: new RenderMarkdown(options).handlebarsDelegate,
+    renderMarkdown: new RenderMarkdown(options).handlebarsDelegate,
     eq(a, b, c) {
       if(typeof c == "undefined") return false;
 

@@ -51,7 +51,9 @@ export default [
 			"util",
 			"buffer",
 			"events",
-			"path"
+			"path",
+			"markdown-it",
+			"punycode"
 		],
 		output: [
 			{ dir: "dist", format: 'cjs' },
