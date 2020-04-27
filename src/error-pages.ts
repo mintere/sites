@@ -21,7 +21,7 @@ export class HTTPError extends Error {
   </head>
   <body>
     <h1>Error ${this.statusCode}</h1>
-    <p>To change this message, create a "${this.statusCode}.hbs" file in your theme's root.</p>
+    <p>To change this message, create a "${this.statusCode}.html" file in your theme's root.</p>
   </body>
   </html>
   `;
