@@ -6,7 +6,7 @@ import RenderMarkdown from "./renderMarkdown";
 import RenderBlock from './renderBlock';
 
 export type HandlebarsHelpers =
-  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown" | "renderBlock";
+  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown" | "renderBlock" | "even";
 
 export const knownHelpers: {
   [k in HandlebarsHelpers]: true;
@@ -16,7 +16,8 @@ export const knownHelpers: {
   eq: true,
   renderRichText: true,
   renderMarkdown: true,
-  renderBlock: true
+  renderBlock: true,
+  even: true
 };
 
 
@@ -45,6 +46,12 @@ export default function getHelpers(
         allowedEqualityChecks[typeof b] &&
         a === b
       );
+    },
+    even(a: any, b: any) {
+      if(typeof b === "undefined") return false;
+      if(typeof b !== "number") return false;
+      
+      return (a % 2) == 0;
     }
   };
 }
