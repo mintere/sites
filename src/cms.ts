@@ -1,5 +1,3 @@
-import { RenderContext } from "./common/context";
-
 export interface RenderData {
   title: string,
   uid: string,
@@ -8,14 +6,9 @@ export interface RenderData {
   blocks: any
 }
 
-interface CMSContent {
-  templateUid: string;
-  renderData: RenderData;
-  renderContext: RenderContext;
-}
+export interface RenderContext {
+  environment: string;
 
-export interface CMSConnectionForRender {
-  contentForPath(
-    path: string
-  ): Promise<CMSContent>;
+  recaptchaV3PublicKey: string;
+  formSubmissionUrl: string;
 }

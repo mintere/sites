@@ -1,5 +1,6 @@
-import { RenderContext } from '../common/context';
-import { BundleRetrieval } from '../common/bundle';
+import Handlebars from "handlebars";
+import { RenderContext } from '../cms';
+import { BundleRetrieval } from '../bundle';
 
 export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
   name: string;
@@ -17,7 +18,6 @@ export interface HandlebarsHelperContext extends Handlebars.HelperOptions {
 }
 
 export interface HandlebarsHelperGlobalContext {
-  compilerMetadata: any;
   renderContext: RenderContext;
 
   blocks: {
@@ -27,6 +27,8 @@ export interface HandlebarsHelperGlobalContext {
   renderTemplate(template: Handlebars.TemplateDelegate, data: any): string
 
   mintereFormsHeadRendered?: true;
+
+  bundle: BundleRetrieval;
 }
 
 export abstract class HandlebarsHelper {

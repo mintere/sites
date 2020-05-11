@@ -1,4 +1,4 @@
-import FrontmatterExtractor from "../src/common/frontmatter-extractor";
+import FrontmatterExtractor from "../src/precompiler/frontmatter-extractor";
 
 test("passthrough with no frontmatter", () => {
   const mock = jest.fn();

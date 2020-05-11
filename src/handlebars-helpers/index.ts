@@ -4,9 +4,10 @@ import MintereFormsHead from "./mintereFormsHead";
 import MintereForm from "./mintereForm";
 import RenderMarkdown from "./renderMarkdown";
 import RenderBlock from './renderBlock';
+import { AssetUrl } from './assets';
 
 export type HandlebarsHelpers =
-  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown" | "renderBlock" | "even";
+  "mintereFormsHead" | "mintereForm" | "eq" | "renderRichText" | "renderMarkdown" | "renderBlock" | "even" | "assetUrl";
 
 export const knownHelpers: {
   [k in HandlebarsHelpers]: true;
@@ -17,7 +18,8 @@ export const knownHelpers: {
   renderRichText: true,
   renderMarkdown: true,
   renderBlock: true,
-  even: true
+  even: true,
+  assetUrl: true
 };
 
 
@@ -39,6 +41,7 @@ export default function getHelpers(
     renderRichText: new RenderMarkdown(options).handlebarsDelegate,
     renderMarkdown: new RenderMarkdown(options).handlebarsDelegate,
     renderBlock: new RenderBlock(options).handlebarsDelegate,
+    assetUrl: new AssetUrl(options).handlebarsDelegate,
     eq(a: any, b: any, c: any) {
       if(typeof c == "undefined") return false;
       return (
