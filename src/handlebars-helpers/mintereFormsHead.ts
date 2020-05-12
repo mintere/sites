@@ -13,7 +13,7 @@ export default class MintereFormsHead extends HandlebarsHelper {
     const urlEncoded = Handlebars.escapeExpression(encodeURIComponent(recaptchaV3PublicKey));
     
     return new Handlebars.SafeString(`
-<script src="/_mintere/forms.js" id="mintere-forms-code"
+<script src="${this.globalCtx.bundle.formsScriptSource()}" id="mintere-forms-code"
         data-recaptcha-key="${urlEncoded}" data-form-submission-url="${formSubmissionUrl}" ></script>`
     )
 

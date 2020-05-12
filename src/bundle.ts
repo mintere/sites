@@ -15,4 +15,6 @@ export interface BundleRetrieval {
   retrieveBlock(name: string): Promise<Handlebars.TemplateDelegate>
 
   assetUrl(assetName: string, options: AssetUrlOptions): string
+
+  formsScriptSource(): string
 }
