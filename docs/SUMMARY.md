@@ -5,11 +5,15 @@
 ## Theme Development
 
 * [Helpers](theme-development/helpers/README.md)
+  * [Content](theme-development/helpers/content/README.md)
+    * [renderBlock](theme-development/helpers/content/renderblock.md)
+    * [renderRichText](theme-development/helpers/content/renderrichtext.md)
+    * [renderMarkdown](theme-development/helpers/content/rendermarkdown.md)
   * [Logic](theme-development/helpers/logic/README.md)
     * [even](theme-development/helpers/logic/even.md)
     * [eq](theme-development/helpers/logic/eq.md)
   * [Assets](theme-development/helpers/assets/README.md)
-    * [staticFilePath](theme-development/helpers/assets/staticfilepath.md)
+    * [assetUrl](theme-development/helpers/assets/staticfilepath.md)
 
 ## Renderer \(Advanced\) <a id="renderer"></a>
 
