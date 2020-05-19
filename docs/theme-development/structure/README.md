@@ -18,6 +18,16 @@ A standard theme's structure will look like this:
 
 There are 5 primary components which make up a theme.
 
+{% page-ref page="templates.md" %}
+
+{% page-ref page="assets.md" %}
+
+{% page-ref page="partials.md" %}
+
+{% page-ref page="blocks.md" %}
+
+{% page-ref page="mocks.md" %}
+
 
 
 
