@@ -12,7 +12,5 @@ We've open-sourced the [library we use to render site templates](https://github.
 
 Documentation for the Mintere app is available at [https://docs.mintere.com/](https://docs.mintere.com/)
 
-{% page-ref page="renderer/getting-started.md" %}
-
 
 

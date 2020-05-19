@@ -22,10 +22,6 @@
   * [Assets](theme-development/helpers/assets/README.md)
     * [assetUrl](theme-development/helpers/assets/staticfilepath.md)
 
-## Renderer \(Advanced\) <a id="renderer"></a>
-
-* [Usage outside of the Platform](renderer/getting-started.md)
-
 ## Other Mintere Resources
 
 * [Platform Docs](https://docs.mintere.com/)
