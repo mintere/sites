@@ -4,6 +4,12 @@
 
 ## Theme Development
 
+* [Getting Started](theme-development/getting-started.md)
+* [Structure](theme-development/structure/README.md)
+  * [Templates](theme-development/structure/templates.md)
+  * [Assets](theme-development/structure/assets.md)
+  * [Blocks](theme-development/structure/blocks.md)
+* [Previewing Locally](theme-development/previewing-locally.md)
 * [Helpers](theme-development/helpers/README.md)
   * [Content](theme-development/helpers/content/README.md)
     * [renderBlock](theme-development/helpers/content/renderblock.md)
