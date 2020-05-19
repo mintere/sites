@@ -8,6 +8,7 @@
 * [Structure](theme-development/structure/README.md)
   * [Templates](theme-development/structure/templates.md)
   * [Assets](theme-development/structure/assets.md)
+  * [Partials](theme-development/structure/partials.md)
   * [Blocks](theme-development/structure/blocks.md)
   * [Mocks](theme-development/structure/mocks.md)
 * [Helpers](theme-development/helpers/README.md)
