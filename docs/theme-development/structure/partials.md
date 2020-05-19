@@ -6,6 +6,7 @@ A great use-case for partials is shared-page layouts.
 
 ### Example
 
+{% code title="theme/partials/layout.hbs" %}
 ```markup
 <!DOCTYPE html>
 <html lang="en">
@@ -21,4 +22,5 @@ A great use-case for partials is shared-page layouts.
 </body>
 </html>
 ```
+{% endcode %}
 
