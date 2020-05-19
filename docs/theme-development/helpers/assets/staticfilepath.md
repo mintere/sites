@@ -4,7 +4,7 @@ description: Retrieve the path to static assets.
 
 # assetUrl
 
-The `assetUrl` helper allows your theme to retrieve the url for assets deployed with the theme itself. 
+The `assetUrl` helper allows your theme to retrieve the url for assets deployed with the theme itself. When deployed to the Sites platform, you must use the `assetUrl` helper for all non-handlebars assets.
 
 Assets should be located in the `assets/` subdirectory.
 
@@ -14,7 +14,7 @@ Static files are assets on Mintere's CDN.
 <img src="{{assetUrl 'logo.png'}}"/>
 ```
 
-The url will include a cache-busting hash. When deployed to the Sites platform, you must use the `assetUrl` helper for all non-handlebars assets.
+The url will include a digest of the content as the `v` query parameter. 
 
 **Options:** You may pass options to assetUrl to adjust image rendering. These only apply when deployed to the Sites platform - they do not take effect when using the local server.
 
