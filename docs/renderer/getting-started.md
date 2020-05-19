@@ -1,4 +1,10 @@
-# Getting Started
+---
+description: >-
+  Instructions for rendering templates and blocks outside of the Mintere Sites
+  workflow.
+---
+
+# Usage outside of the Platform
 
 ### Install
 

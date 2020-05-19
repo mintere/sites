@@ -24,7 +24,7 @@
 
 ## Renderer \(Advanced\) <a id="renderer"></a>
 
-* [Getting Started](renderer/getting-started.md)
+* [Usage outside of the Platform](renderer/getting-started.md)
 
 ## Other Mintere Resources
 
