@@ -9,6 +9,7 @@
   * [Templates](theme-development/structure/templates.md)
   * [Assets](theme-development/structure/assets.md)
   * [Blocks](theme-development/structure/blocks.md)
+  * [Mocks](theme-development/structure/mocks.md)
 * [Previewing Locally](theme-development/previewing-locally.md)
 * [Helpers](theme-development/helpers/README.md)
   * [Content](theme-development/helpers/content/README.md)
