@@ -10,7 +10,7 @@ How template appear in the Sites Studio can be configured using front-matter, de
 
 ### Example
 
-{% code title="templates/basic-page.hbs" %}
+{% code title="theme/templates/basic-page.hbs" %}
 ```markup
 ---
 {
