@@ -21,6 +21,7 @@
     * [eq](theme-development/helpers/logic/eq.md)
   * [Assets](theme-development/helpers/assets/README.md)
     * [assetUrl](theme-development/helpers/assets/staticfilepath.md)
+* [Template Schemas](theme-development/template-schemas.md)
 * [Deployment](theme-development/deployment/README.md)
   * [Using GitHub Actions](theme-development/deployment/using-github-actions.md)
 
