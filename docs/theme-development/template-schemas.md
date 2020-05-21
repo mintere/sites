@@ -1,6 +1,6 @@
 # Template Schemas
 
-Note that blocks are rendered with their schema settings as their render data, while templates have access to more data, and have access to their schema settings under the `settings` object.
+Note that blocks are rendered with their schema settings directly as their render data, while templates have access to more data, and have access to their schema settings under the `settings` object.
 
 ### Fields
 
