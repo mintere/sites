@@ -1,6 +1,6 @@
 {
   "name": "@mintere/sites",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "The Source-Available Front-End for Mintere Sites",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

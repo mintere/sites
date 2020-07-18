@@ -1,6 +1,8 @@
 import { Transform, Readable } from "readable-stream";
 import json5 from "json5";
 
+import {EOL} from "os";
+
 export default class FrontmatterExtractor extends Transform {
   state: "fileStart" | "inFrontmatter" | "inBody" = "fileStart";
 
@@ -44,11 +46,11 @@ export default class FrontmatterExtractor extends Transform {
   rawFrontmatter: Buffer[] = [];
 
   openDelimCharsSeen = 0;
-  openDelimChars = Buffer.from("---\n");
+  openDelimChars = Buffer.from("---" + EOL);
   openDelimCharsLen = this.openDelimChars.length;
 
   closeDelimCharsSeen = 0;
-  closeDelimChars = Buffer.from("\n---\n");
+  closeDelimChars = Buffer.from(EOL + "---" + EOL);
   closeDelimCharsLen = this.closeDelimChars.length;
 
   _transform(chunk: Buffer, _enc: string, done: (error?: any, data?: any) => void) {

@@ -11,4 +11,8 @@ export interface RenderContext {
 
   recaptchaV3PublicKey: string;
   formSubmissionUrl: string;
+
+  cdnHostname: string;
+
+  siteId: string;
 }
